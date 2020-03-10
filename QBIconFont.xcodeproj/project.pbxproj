@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EA37D1E2417E0F900EFAEC9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8EA37D192417E0F900EFAEC9 /* .gitkeep */; };
+		8EA37D1F2417E0F900EFAEC9 /* QBIconFontInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */; };
+		8EA37D202417E0F900EFAEC9 /* QBIconFontHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1B2417E0F900EFAEC9 /* QBIconFontHelper.m */; };
+		8EA37D212417E0F900EFAEC9 /* QBIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */; };
+		8EAB5DB72417DD7500EA88F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DB62417DD7500EA88F0 /* AppDelegate.m */; };
+		8EAB5DBA2417DD7500EA88F0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DB92417DD7500EA88F0 /* SceneDelegate.m */; };
+		8EAB5DBD2417DD7500EA88F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DBC2417DD7500EA88F0 /* ViewController.m */; };
+		8EAB5DC02417DD7600EA88F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB5DBE2417DD7600EA88F0 /* Main.storyboard */; };
+		8EAB5DC22417DD7700EA88F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB5DC12417DD7700EA88F0 /* Assets.xcassets */; };
+		8EAB5DC52417DD7700EA88F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB5DC32417DD7700EA88F0 /* LaunchScreen.storyboard */; };
+		8EAB5DC82417DD7700EA88F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DC72417DD7700EA88F0 /* main.m */; };
+		8EAB5DD22417DD7700EA88F0 /* QBIconFontTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DD12417DD7700EA88F0 /* QBIconFontTests.m */; };
+		8EAB5DDD2417DD7700EA88F0 /* QBIconFontUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DDC2417DD7700EA88F0 /* QBIconFontUITests.m */; };
+		8EAB5DF72417DEB000EA88F0 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EAB5DF62417DE9800EA88F0 /* iconfont.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8EAB5DCE2417DD7700EA88F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EAB5DAA2417DD7500EA88F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EAB5DB12417DD7500EA88F0;
+			remoteInfo = QBIconFont;
+		};
+		8EAB5DD92417DD7700EA88F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8EAB5DAA2417DD7500EA88F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EAB5DB12417DD7500EA88F0;
+			remoteInfo = QBIconFont;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8EA37D172417E0F900EFAEC9 /* QBIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFont.h; sourceTree = "<group>"; };
+		8EA37D182417E0F900EFAEC9 /* QBIconFontHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFontHelper.h; sourceTree = "<group>"; };
+		8EA37D192417E0F900EFAEC9 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBIconFontInfo.m; sourceTree = "<group>"; };
+		8EA37D1B2417E0F900EFAEC9 /* QBIconFontHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBIconFontHelper.m; sourceTree = "<group>"; };
+		8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBIconFont.m; sourceTree = "<group>"; };
+		8EA37D1D2417E0F900EFAEC9 /* QBIconFontInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFontInfo.h; sourceTree = "<group>"; };
+		8EAB5DB22417DD7500EA88F0 /* QBIconFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBIconFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAB5DB52417DD7500EA88F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8EAB5DB62417DD7500EA88F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8EAB5DB82417DD7500EA88F0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		8EAB5DB92417DD7500EA88F0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		8EAB5DBB2417DD7500EA88F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8EAB5DBC2417DD7500EA88F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8EAB5DBF2417DD7600EA88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EAB5DC12417DD7700EA88F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EAB5DC42417DD7700EA88F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EAB5DC62417DD7700EA88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAB5DC72417DD7700EA88F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8EAB5DCD2417DD7700EA88F0 /* QBIconFontTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBIconFontTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAB5DD12417DD7700EA88F0 /* QBIconFontTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBIconFontTests.m; sourceTree = "<group>"; };
+		8EAB5DD32417DD7700EA88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAB5DD82417DD7700EA88F0 /* QBIconFontUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBIconFontUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EAB5DDC2417DD7700EA88F0 /* QBIconFontUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBIconFontUITests.m; sourceTree = "<group>"; };
+		8EAB5DDE2417DD7700EA88F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAB5DF42417DDC700EA88F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8EAB5DF62417DE9800EA88F0 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8EAB5DAF2417DD7500EA88F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAB5DCA2417DD7700EA88F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAB5DD52417DD7700EA88F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EA37D162417E0F900EFAEC9 /* IconFont */ = {
+			isa = PBXGroup;
+			children = (
+				8EA37D172417E0F900EFAEC9 /* QBIconFont.h */,
+				8EA37D182417E0F900EFAEC9 /* QBIconFontHelper.h */,
+				8EA37D192417E0F900EFAEC9 /* .gitkeep */,
+				8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */,
+				8EA37D1B2417E0F900EFAEC9 /* QBIconFontHelper.m */,
+				8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */,
+				8EA37D1D2417E0F900EFAEC9 /* QBIconFontInfo.h */,
+			);
+			path = IconFont;
+			sourceTree = "<group>";
+		};
+		8EAB5DA92417DD7500EA88F0 = {
+			isa = PBXGroup;
+			children = (
+				8EAB5DB42417DD7500EA88F0 /* QBIconFont */,
+				8EAB5DD02417DD7700EA88F0 /* QBIconFontTests */,
+				8EAB5DDB2417DD7700EA88F0 /* QBIconFontUITests */,
+				8EAB5DB32417DD7500EA88F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8EAB5DB32417DD7500EA88F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8EAB5DB22417DD7500EA88F0 /* QBIconFont.app */,
+				8EAB5DCD2417DD7700EA88F0 /* QBIconFontTests.xctest */,
+				8EAB5DD82417DD7700EA88F0 /* QBIconFontUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8EAB5DB42417DD7500EA88F0 /* QBIconFont */ = {
+			isa = PBXGroup;
+			children = (
+				8EA37D162417E0F900EFAEC9 /* IconFont */,
+				8EAB5DB52417DD7500EA88F0 /* AppDelegate.h */,
+				8EAB5DB62417DD7500EA88F0 /* AppDelegate.m */,
+				8EAB5DB82417DD7500EA88F0 /* SceneDelegate.h */,
+				8EAB5DB92417DD7500EA88F0 /* SceneDelegate.m */,
+				8EAB5DBB2417DD7500EA88F0 /* ViewController.h */,
+				8EAB5DBC2417DD7500EA88F0 /* ViewController.m */,
+				8EAB5DBE2417DD7600EA88F0 /* Main.storyboard */,
+				8EAB5DC12417DD7700EA88F0 /* Assets.xcassets */,
+				8EAB5DC32417DD7700EA88F0 /* LaunchScreen.storyboard */,
+				8EAB5DC62417DD7700EA88F0 /* Info.plist */,
+				8EAB5DF42417DDC700EA88F0 /* PrefixHeader.pch */,
+				8EAB5DC72417DD7700EA88F0 /* main.m */,
+				8EAB5DF62417DE9800EA88F0 /* iconfont.ttf */,
+			);
+			path = QBIconFont;
+			sourceTree = "<group>";
+		};
+		8EAB5DD02417DD7700EA88F0 /* QBIconFontTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EAB5DD12417DD7700EA88F0 /* QBIconFontTests.m */,
+				8EAB5DD32417DD7700EA88F0 /* Info.plist */,
+			);
+			path = QBIconFontTests;
+			sourceTree = "<group>";
+		};
+		8EAB5DDB2417DD7700EA88F0 /* QBIconFontUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8EAB5DDC2417DD7700EA88F0 /* QBIconFontUITests.m */,
+				8EAB5DDE2417DD7700EA88F0 /* Info.plist */,
+			);
+			path = QBIconFontUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8EAB5DB12417DD7500EA88F0 /* QBIconFont */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EAB5DE12417DD7700EA88F0 /* Build configuration list for PBXNativeTarget "QBIconFont" */;
+			buildPhases = (
+				8EAB5DAE2417DD7500EA88F0 /* Sources */,
+				8EAB5DAF2417DD7500EA88F0 /* Frameworks */,
+				8EAB5DB02417DD7500EA88F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QBIconFont;
+			productName = QBIconFont;
+			productReference = 8EAB5DB22417DD7500EA88F0 /* QBIconFont.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8EAB5DCC2417DD7700EA88F0 /* QBIconFontTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EAB5DE42417DD7700EA88F0 /* Build configuration list for PBXNativeTarget "QBIconFontTests" */;
+			buildPhases = (
+				8EAB5DC92417DD7700EA88F0 /* Sources */,
+				8EAB5DCA2417DD7700EA88F0 /* Frameworks */,
+				8EAB5DCB2417DD7700EA88F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EAB5DCF2417DD7700EA88F0 /* PBXTargetDependency */,
+			);
+			name = QBIconFontTests;
+			productName = QBIconFontTests;
+			productReference = 8EAB5DCD2417DD7700EA88F0 /* QBIconFontTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EAB5DD72417DD7700EA88F0 /* QBIconFontUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EAB5DE72417DD7700EA88F0 /* Build configuration list for PBXNativeTarget "QBIconFontUITests" */;
+			buildPhases = (
+				8EAB5DD42417DD7700EA88F0 /* Sources */,
+				8EAB5DD52417DD7700EA88F0 /* Frameworks */,
+				8EAB5DD62417DD7700EA88F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EAB5DDA2417DD7700EA88F0 /* PBXTargetDependency */,
+			);
+			name = QBIconFontUITests;
+			productName = QBIconFontUITests;
+			productReference = 8EAB5DD82417DD7700EA88F0 /* QBIconFontUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8EAB5DAA2417DD7500EA88F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "覃斌 卢   ";
+				TargetAttributes = {
+					8EAB5DB12417DD7500EA88F0 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					8EAB5DCC2417DD7700EA88F0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8EAB5DB12417DD7500EA88F0;
+					};
+					8EAB5DD72417DD7700EA88F0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 8EAB5DB12417DD7500EA88F0;
+					};
+				};
+			};
+			buildConfigurationList = 8EAB5DAD2417DD7500EA88F0 /* Build configuration list for PBXProject "QBIconFont" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8EAB5DA92417DD7500EA88F0;
+			productRefGroup = 8EAB5DB32417DD7500EA88F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8EAB5DB12417DD7500EA88F0 /* QBIconFont */,
+				8EAB5DCC2417DD7700EA88F0 /* QBIconFontTests */,
+				8EAB5DD72417DD7700EA88F0 /* QBIconFontUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8EAB5DB02417DD7500EA88F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EAB5DF72417DEB000EA88F0 /* iconfont.ttf in Resources */,
+				8EAB5DC52417DD7700EA88F0 /* LaunchScreen.storyboard in Resources */,
+				8EA37D1E2417E0F900EFAEC9 /* .gitkeep in Resources */,
+				8EAB5DC22417DD7700EA88F0 /* Assets.xcassets in Resources */,
+				8EAB5DC02417DD7600EA88F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAB5DCB2417DD7700EA88F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAB5DD62417DD7700EA88F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8EAB5DAE2417DD7500EA88F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA37D202417E0F900EFAEC9 /* QBIconFontHelper.m in Sources */,
+				8EAB5DBD2417DD7500EA88F0 /* ViewController.m in Sources */,
+				8EA37D1F2417E0F900EFAEC9 /* QBIconFontInfo.m in Sources */,
+				8EA37D212417E0F900EFAEC9 /* QBIconFont.m in Sources */,
+				8EAB5DB72417DD7500EA88F0 /* AppDelegate.m in Sources */,
+				8EAB5DC82417DD7700EA88F0 /* main.m in Sources */,
+				8EAB5DBA2417DD7500EA88F0 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAB5DC92417DD7700EA88F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EAB5DD22417DD7700EA88F0 /* QBIconFontTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EAB5DD42417DD7700EA88F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EAB5DDD2417DD7700EA88F0 /* QBIconFontUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EAB5DCF2417DD7700EA88F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EAB5DB12417DD7500EA88F0 /* QBIconFont */;
+			targetProxy = 8EAB5DCE2417DD7700EA88F0 /* PBXContainerItemProxy */;
+		};
+		8EAB5DDA2417DD7700EA88F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EAB5DB12417DD7500EA88F0 /* QBIconFont */;
+			targetProxy = 8EAB5DD92417DD7700EA88F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8EAB5DBE2417DD7600EA88F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EAB5DBF2417DD7600EA88F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8EAB5DC32417DD7700EA88F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EAB5DC42417DD7700EA88F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8EAB5DDF2417DD7700EA88F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8EAB5DE02417DD7700EA88F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8EAB5DE22417DD7700EA88F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER283WPG8S;
+				GCC_PREFIX_HEADER = QBIconFont/PrefixHeader.pch;
+				INFOPLIST_FILE = QBIconFont/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lqb.QBIconFont;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EAB5DE32417DD7700EA88F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER283WPG8S;
+				GCC_PREFIX_HEADER = QBIconFont/PrefixHeader.pch;
+				INFOPLIST_FILE = QBIconFont/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lqb.QBIconFont;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8EAB5DE52417DD7700EA88F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER283WPG8S;
+				INFOPLIST_FILE = QBIconFontTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lqb.QBIconFontTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QBIconFont.app/QBIconFont";
+			};
+			name = Debug;
+		};
+		8EAB5DE62417DD7700EA88F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER283WPG8S;
+				INFOPLIST_FILE = QBIconFontTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lqb.QBIconFontTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QBIconFont.app/QBIconFont";
+			};
+			name = Release;
+		};
+		8EAB5DE82417DD7700EA88F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER283WPG8S;
+				INFOPLIST_FILE = QBIconFontUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lqb.QBIconFontUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QBIconFont;
+			};
+			name = Debug;
+		};
+		8EAB5DE92417DD7700EA88F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ER283WPG8S;
+				INFOPLIST_FILE = QBIconFontUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lqb.QBIconFontUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QBIconFont;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8EAB5DAD2417DD7500EA88F0 /* Build configuration list for PBXProject "QBIconFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EAB5DDF2417DD7700EA88F0 /* Debug */,
+				8EAB5DE02417DD7700EA88F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EAB5DE12417DD7700EA88F0 /* Build configuration list for PBXNativeTarget "QBIconFont" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EAB5DE22417DD7700EA88F0 /* Debug */,
+				8EAB5DE32417DD7700EA88F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EAB5DE42417DD7700EA88F0 /* Build configuration list for PBXNativeTarget "QBIconFontTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EAB5DE52417DD7700EA88F0 /* Debug */,
+				8EAB5DE62417DD7700EA88F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EAB5DE72417DD7700EA88F0 /* Build configuration list for PBXNativeTarget "QBIconFontUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EAB5DE82417DD7700EA88F0 /* Debug */,
+				8EAB5DE92417DD7700EA88F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8EAB5DAA2417DD7500EA88F0 /* Project object */;
+}
