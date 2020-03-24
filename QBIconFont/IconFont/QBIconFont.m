@@ -86,9 +86,9 @@ static const NSString *synKey = @"synKey";
     CGFloat realSize = size * scale;
     UIFont *font = [UIFont fontWithName:fontInfo.fontName size:realSize];
     CGFloat imageSize = fontInfo.size * scale;
-    CGFloat imageWidth = [QBIconFontHelper wmWidthWithString:fontInfo.text font:font maxHeight:imageSize];
+//    CGFloat imageWidth = [QBIconFontHelper wmWidthWithString:fontInfo.text font:font maxHeight:imageSize];
     
-    UIGraphicsBeginImageContext(CGSizeMake(imageWidth, imageSize));
+    UIGraphicsBeginImageContext(CGSizeMake(imageSize, imageSize));
     if (fontInfo.backgroundColor) {
         [fontInfo.backgroundColor set];
         UIRectFill(CGRectMake(0.0, 0.0, imageSize, imageSize)); //fill the background
