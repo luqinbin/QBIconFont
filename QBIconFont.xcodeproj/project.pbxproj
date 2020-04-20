@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E47BC5E244D964400910F30 /* QBIconFont+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47BC5D244D964400910F30 /* QBIconFont+Conveniences.m */; };
+		8E47BC61244D96C600910F30 /* UIColor+QBIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47BC60244D96C600910F30 /* UIColor+QBIconFont.m */; };
+		8E47BC64244D985A00910F30 /* NSString+QBIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47BC63244D985A00910F30 /* NSString+QBIconFont.m */; };
+		8E47BC67244D99B800910F30 /* UIImage+QBIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47BC66244D99B800910F30 /* UIImage+QBIconFont.m */; };
 		8EA37D1E2417E0F900EFAEC9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8EA37D192417E0F900EFAEC9 /* .gitkeep */; };
 		8EA37D1F2417E0F900EFAEC9 /* QBIconFontInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */; };
-		8EA37D202417E0F900EFAEC9 /* QBIconFontHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1B2417E0F900EFAEC9 /* QBIconFontHelper.m */; };
 		8EA37D212417E0F900EFAEC9 /* QBIconFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */; };
 		8EAB5DB72417DD7500EA88F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DB62417DD7500EA88F0 /* AppDelegate.m */; };
 		8EAB5DBA2417DD7500EA88F0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAB5DB92417DD7500EA88F0 /* SceneDelegate.m */; };
@@ -41,11 +44,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E47BC5C244D964400910F30 /* QBIconFont+Conveniences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QBIconFont+Conveniences.h"; sourceTree = "<group>"; };
+		8E47BC5D244D964400910F30 /* QBIconFont+Conveniences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QBIconFont+Conveniences.m"; sourceTree = "<group>"; };
+		8E47BC5F244D96C600910F30 /* UIColor+QBIconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+QBIconFont.h"; sourceTree = "<group>"; };
+		8E47BC60244D96C600910F30 /* UIColor+QBIconFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QBIconFont.m"; sourceTree = "<group>"; };
+		8E47BC62244D985A00910F30 /* NSString+QBIconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+QBIconFont.h"; sourceTree = "<group>"; };
+		8E47BC63244D985A00910F30 /* NSString+QBIconFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+QBIconFont.m"; sourceTree = "<group>"; };
+		8E47BC65244D99B800910F30 /* UIImage+QBIconFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+QBIconFont.h"; sourceTree = "<group>"; };
+		8E47BC66244D99B800910F30 /* UIImage+QBIconFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QBIconFont.m"; sourceTree = "<group>"; };
 		8EA37D172417E0F900EFAEC9 /* QBIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFont.h; sourceTree = "<group>"; };
-		8EA37D182417E0F900EFAEC9 /* QBIconFontHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFontHelper.h; sourceTree = "<group>"; };
 		8EA37D192417E0F900EFAEC9 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBIconFontInfo.m; sourceTree = "<group>"; };
-		8EA37D1B2417E0F900EFAEC9 /* QBIconFontHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBIconFontHelper.m; sourceTree = "<group>"; };
 		8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBIconFont.m; sourceTree = "<group>"; };
 		8EA37D1D2417E0F900EFAEC9 /* QBIconFontInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFontInfo.h; sourceTree = "<group>"; };
 		8EAB5DB22417DD7500EA88F0 /* QBIconFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBIconFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +108,18 @@
 			isa = PBXGroup;
 			children = (
 				8EA37D172417E0F900EFAEC9 /* QBIconFont.h */,
-				8EA37D182417E0F900EFAEC9 /* QBIconFontHelper.h */,
 				8EA37D192417E0F900EFAEC9 /* .gitkeep */,
 				8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */,
-				8EA37D1B2417E0F900EFAEC9 /* QBIconFontHelper.m */,
 				8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */,
 				8EA37D1D2417E0F900EFAEC9 /* QBIconFontInfo.h */,
+				8E47BC5C244D964400910F30 /* QBIconFont+Conveniences.h */,
+				8E47BC5D244D964400910F30 /* QBIconFont+Conveniences.m */,
+				8E47BC5F244D96C600910F30 /* UIColor+QBIconFont.h */,
+				8E47BC60244D96C600910F30 /* UIColor+QBIconFont.m */,
+				8E47BC62244D985A00910F30 /* NSString+QBIconFont.h */,
+				8E47BC63244D985A00910F30 /* NSString+QBIconFont.m */,
+				8E47BC65244D99B800910F30 /* UIImage+QBIconFont.h */,
+				8E47BC66244D99B800910F30 /* UIImage+QBIconFont.m */,
 			);
 			path = IconFont;
 			sourceTree = "<group>";
@@ -300,10 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EA37D202417E0F900EFAEC9 /* QBIconFontHelper.m in Sources */,
 				8EAB5DBD2417DD7500EA88F0 /* ViewController.m in Sources */,
+				8E47BC5E244D964400910F30 /* QBIconFont+Conveniences.m in Sources */,
+				8E47BC61244D96C600910F30 /* UIColor+QBIconFont.m in Sources */,
 				8EA37D1F2417E0F900EFAEC9 /* QBIconFontInfo.m in Sources */,
 				8EA37D212417E0F900EFAEC9 /* QBIconFont.m in Sources */,
+				8E47BC64244D985A00910F30 /* NSString+QBIconFont.m in Sources */,
+				8E47BC67244D99B800910F30 /* UIImage+QBIconFont.m in Sources */,
 				8EAB5DB72417DD7500EA88F0 /* AppDelegate.m in Sources */,
 				8EAB5DC82417DD7700EA88F0 /* main.m in Sources */,
 				8EAB5DBA2417DD7500EA88F0 /* SceneDelegate.m in Sources */,

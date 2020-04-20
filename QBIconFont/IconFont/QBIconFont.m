@@ -8,7 +8,6 @@
 
 #import "QBIconFont.h"
 #import "QBIconFontInfo.h"
-#import "QBIconFontHelper.h"
 #import <CoreText/CoreText.h>
 
 static QBCacheIconFonts *cacheIconFonts;
@@ -86,7 +85,6 @@ static const NSString *synKey = @"synKey";
     CGFloat realSize = size * scale;
     UIFont *font = [UIFont fontWithName:fontInfo.fontName size:realSize];
     CGFloat imageSize = fontInfo.size * scale;
-//    CGFloat imageWidth = [QBIconFontHelper wmWidthWithString:fontInfo.text font:font maxHeight:imageSize];
     
     UIGraphicsBeginImageContext(CGSizeMake(imageSize, imageSize));
     if (fontInfo.backgroundColor) {
