@@ -15,15 +15,19 @@ static float QBIconDefautPadding = 0.2;
 
 @implementation QBIconFont (Conveniences)
 
-+ (UIImage *)iconWithUnicodeName:(NSString *)unicodeName color:(NSString *)hexColor {
++ (UIImage *)iconWithUnicodeName:(NSString *)unicodeName color:(UIColor *)color {
+    return [self iconWithUnicodeName:unicodeName fontSize:QBIconFontDefautSize color:color];
+}
+
++ (UIImage *)iconWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor {
     return [self iconWithUnicodeName:unicodeName fontSize:QBIconFontDefautSize color:[UIColor qbColorWithHexString:hexColor]];
 }
 
-+ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName color:(NSString *)hexColor backgroundColor:(NSString * _Nullable)backgroundHexColor {
-    return [self iconInRoundWithUnicodeName:unicodeName color:hexColor backgroundColor:backgroundHexColor backgroundAlpha:1];
++ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor {
+    return [self iconInRoundWithUnicodeName:unicodeName hexColor:hexColor backgroundHexColor:backgroundHexColor backgroundAlpha:1];
 }
 
-+ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName color:(NSString *)hexColor backgroundColor:(NSString * _Nullable)backgroundHexColor backgroundAlpha:(float)alpha {
++ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor backgroundAlpha:(float)alpha {
     UIColor *color = [UIColor qbColorWithHexString:hexColor];
     UIColor *bgColor = [UIColor qbColorWithHexString:backgroundHexColor alpha:alpha];
     UIImage *image = [QBIconFont iconWithUnicodeName:unicodeName

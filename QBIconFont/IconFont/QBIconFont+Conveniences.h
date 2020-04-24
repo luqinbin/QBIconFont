@@ -14,14 +14,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// icon透明背景
 /// @param unicodeName unicode码
+/// @param color icon颜色
++ (UIImage *)iconWithUnicodeName:(NSString *)unicodeName color:(UIColor *)color;
+
+/// icon透明背景
+/// @param unicodeName unicode码
 /// @param hexColor icon十六进制颜色
-+ (UIImage *)iconWithUnicodeName:(NSString *)unicodeName color:(NSString *)hexColor;
++ (UIImage *)iconWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor;
 
 /// 圆形icon背景
 /// @param unicodeName unicode码
 /// @param hexColor icon十六进制颜色
 /// @param backgroundHexColor icon背景十六进制颜色
-+ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName color:(NSString *)hexColor backgroundColor:(NSString * _Nullable)backgroundHexColor;
++ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor;
 
 
 /// 圆形icon背景
@@ -29,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param hexColor  icon十六进制颜色
 /// @param backgroundHexColor icon背景十六进制颜色
 /// @param alpha 背景透明度
-+ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName color:(NSString *)hexColor backgroundColor:(NSString * _Nullable)backgroundHexColor backgroundAlpha:(float)alpha;
++ (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor backgroundAlpha:(float)alpha;
 
 @end
 
