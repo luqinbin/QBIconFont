@@ -1,21 +1,28 @@
 //
-//  UIColor+QBIconFont.m
+//  QBIconFontUtils.m
 //  QBIconFont
 //
-//  Created by 覃斌 卢    on 2020/4/20.
+//  Created by 覃斌 卢    on 2020/5/11.
 //  Copyright © 2020 覃斌 卢   . All rights reserved.
 //
 
-#import "UIColor+QBIconFont.h"
-#import "NSString+QBIconFont.h"
+#import "QBIconFontUtils.h"
 
-@implementation UIColor (QBIconFont)
+@implementation QBIconFontUtils
+
+#pragma mark - string
+
++ (BOOL)isEmptyString:(NSString *)string {
+    return [string isEqual:[NSNull null]] || string == nil || string.length == 0;
+}
+
+#pragma mark - color
 
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex {
     NSUInteger a = ((hex >> 24) & 0x000000FF);
     float fa = ((0 == a) ? 1.0f : (a * 1.0f) / 255.0f);
     
-    return [UIColor qbColorWithHexValue:hex alpha:fa];
+    return [self qbColorWithHexValue:hex alpha:fa];
 }
     
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex alpha:(CGFloat)alpha {
@@ -50,11 +57,11 @@
 }
 
 + (UIColor *)qbColorWithHexString:(NSString *)hex defaultHexString:(NSString *)defaultHex alpha:(CGFloat)alpha {
-    if ([NSString isEmpty:hex]) {
-        if ([NSString isEmpty:defaultHex]) {
+    if ([self isEmptyString:hex]) {
+        if ([self isEmptyString:defaultHex]) {
             return [UIColor clearColor];
         }
-        return [UIColor qbColorWithHexString:defaultHex];
+        return [self qbColorWithHexString:defaultHex];
     }
     
     NSString *cString = [[hex stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
@@ -62,7 +69,7 @@
         cString = [cString substringFromIndex:1];
         if (cString.length == 3) {
             NSUInteger hexRGB = strtol(cString.UTF8String , nil, 16);
-            return [UIColor qbColorWithShortHexValue:hexRGB alpha:alpha];
+            return [self qbColorWithShortHexValue:hexRGB alpha:alpha];
         } else if (cString.length == 4) {
             // Separate into a, r, g, b substrings
             // a
@@ -90,7 +97,7 @@
                                    alpha:a];
         } else if (cString.length == 6) {
             NSUInteger hexRGB = strtol(cString.UTF8String , nil, 16);
-            return [UIColor qbColorWithHexValue:hexRGB alpha:alpha];
+            return [self qbColorWithHexValue:hexRGB alpha:alpha];
         } else if (cString.length == 8) {
             // Separate into a, r, g, b substrings
             // a
@@ -121,34 +128,47 @@
         cString = [cString substringFromIndex:2];
         if (cString.length == 8) {
             NSUInteger hexRGB = strtol(cString.UTF8String , nil, 16);
-            return [UIColor qbColorWithHexValue:hexRGB];
+            return [self qbColorWithHexValue:hexRGB];
         } else if (cString.length == 6) {
             NSUInteger hexRGB = strtol(cString.UTF8String , nil, 16);
-            return [UIColor qbColorWithHexValue:hexRGB alpha:alpha];
+            return [self qbColorWithHexValue:hexRGB alpha:alpha];
         } else {
-            if ([NSString isEmpty:defaultHex]) {
+            if ([self isEmptyString:defaultHex]) {
                 return [UIColor clearColor];
             }
-            return [UIColor qbColorWithHexString:defaultHex];
+            return [self qbColorWithHexString:defaultHex];
         }
     }
-    if ([NSString isEmpty:defaultHex]) {
+    if ([self isEmptyString:defaultHex]) {
         return [UIColor clearColor];
     }
-    return [UIColor qbColorWithHexString:defaultHex];
+    return [self qbColorWithHexString:defaultHex];
 }
 
 + (UIColor *)qbColorWithHexString:(NSString *)hex alpha:(CGFloat)alpha {
-    return [UIColor qbColorWithHexString:hex defaultHexString:@"" alpha:alpha];
+    return [self qbColorWithHexString:hex defaultHexString:@"" alpha:alpha];
 }
 
 + (UIColor *)qbColorWithHexString:(NSString *)hex defaultHexString:(NSString *)defaultHex {
-    return [UIColor qbColorWithHexString:hex defaultHexString:defaultHex alpha:1.0 ];
+    return [self qbColorWithHexString:hex defaultHexString:defaultHex alpha:1.0 ];
 }
 
 + (UIColor *)qbColorWithHexString:(NSString *)hex {
-    return [UIColor qbColorWithHexString:hex alpha:1.0];
+    return [self qbColorWithHexString:hex alpha:1.0];
 }
 
+#pragma mark - Image
++ (UIImage *)qbRoundClipImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius {
+    int w = image.size.width * image.scale;
+    int h = image.size.height * image.scale;
+    CGRect rect = CGRectMake(0, 0, w, h);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(w, h), false, 1.0);
+    [[UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius] addClip];
+    [image drawInRect:rect];
+    
+    UIImage *ret = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return ret;
+}
 
 @end

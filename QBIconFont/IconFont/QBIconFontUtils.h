@@ -1,17 +1,22 @@
 //
-//  UIColor+QBIconFont.h
+//  QBIconFontUtils.h
 //  QBIconFont
 //
-//  Created by 覃斌 卢    on 2020/4/20.
+//  Created by 覃斌 卢    on 2020/5/11.
 //  Copyright © 2020 覃斌 卢   . All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (QBIconFont)
+@interface QBIconFontUtils : NSObject
 
+#pragma mark - string
+// 是否是空string
++ (BOOL)isEmptyString:(NSString *)string;
+
+#pragma mark - color
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex;
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex alpha:(CGFloat)alpha;
 + (UIColor *)qbColorWithShortHexValue:(NSUInteger)hex alpha:(CGFloat)alpha;
@@ -39,6 +44,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// hex颜色
 /// @param hex 颜色字符串
 + (UIColor *)qbColorWithHexString:(NSString *)hex;
+
+#pragma mark - Image
+/// 圆角裁剪
+/// @param image image
+/// @param cornerRadius 圆角j直径
++ (UIImage *)qbRoundClipImage:(UIImage *)image cornerRadius:(CGFloat)cornerRadius;
+
 
 @end
 

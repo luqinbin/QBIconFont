@@ -7,8 +7,7 @@
 //
 
 #import "QBIconFont+Conveniences.h"
-#import "UIColor+QBIconFont.h"
-#import "UIImage+QBIconFont.h"
+#import "QBIconFontUtils.h"
 
 static float QBIconFontDefautSize = 100;
 static float QBIconDefautPadding = 0.2;
@@ -20,7 +19,7 @@ static float QBIconDefautPadding = 0.2;
 }
 
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor {
-    return [self iconWithUnicodeName:unicodeName fontSize:QBIconFontDefautSize color:[UIColor qbColorWithHexString:hexColor]];
+    return [self iconWithUnicodeName:unicodeName fontSize:QBIconFontDefautSize color:[QBIconFontUtils qbColorWithHexString:hexColor]];
 }
 
 + (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor {
@@ -28,15 +27,15 @@ static float QBIconDefautPadding = 0.2;
 }
 
 + (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor backgroundAlpha:(float)alpha {
-    UIColor *color = [UIColor qbColorWithHexString:hexColor];
-    UIColor *bgColor = [UIColor qbColorWithHexString:backgroundHexColor alpha:alpha];
+    UIColor *color = [QBIconFontUtils qbColorWithHexString:hexColor];
+    UIColor *bgColor = [QBIconFontUtils qbColorWithHexString:backgroundHexColor alpha:alpha];
     UIImage *image = [QBIconFont iconWithUnicodeName:unicodeName
                                             fontSize:QBIconFontDefautSize
                                                color:color
                                              padding:QBIconDefautPadding
                                      backgroundColor:bgColor];
     
-    return [image qbImageRoundClip:image.size.width];
+    return [QBIconFontUtils qbRoundClipImage:image cornerRadius:image.size.width];
 }
 
 @end
