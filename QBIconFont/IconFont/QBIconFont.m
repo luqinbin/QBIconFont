@@ -66,9 +66,7 @@ static Class<IconFontClassMapProtocol> iconFontMapClass;
 
 + (UIImage *)iconWithFontName:(NSString *)fontName unicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset backgroundColor:(UIColor * _Nullable)backgroundColor {
     NSString *unicode = unicodeName;
-    if (![unicodeName canBeConvertedToEncoding:NSASCIIStringEncoding]) {
-        unicode = unicodeName;
-    } else {
+    if ([unicodeName canBeConvertedToEncoding:NSASCIIStringEncoding]) {
         if (![unicodeName hasPrefix:@"&#x"]) {
             unicodeName = [NSString stringWithFormat:@"&#x%@", unicodeName];
         }
