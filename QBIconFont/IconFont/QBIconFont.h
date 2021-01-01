@@ -23,16 +23,47 @@ NS_ASSUME_NONNULL_BEGIN
 //- (instancetype)initWithFontName:(NSString *)fontName NS_DESIGNATED_INITIALIZER;
 
 #pragma mark - initWithUnicodeName
+/// 使用unicodeName创建icon
+/// @param unicodeName 支持3种格式，eg：1. @"e6e7"   2. @"&#xe6e7"   3. @"\U0000e6e7"
+/// @param size  icon大小
+/// @param color icon形状颜色
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color;
 
+/// 使用unicodeName创建icon
+/// @param unicodeName 支持3种格式，eg：1. @"e6e7"   2. @"&#xe6e7"   3. @"\U0000e6e7"
+/// @param size icon大小
+/// @param color icon形状颜色
+/// @param backgroundColor 背景色
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color backgroundColor:(UIColor * _Nullable)backgroundColor;
 
+/// 使用unicodeName创建icon
+/// @param unicodeName 支持3种格式，eg：1. @"e6e7"   2. @"&#xe6e7"   3. @"\U0000e6e7"
+/// @param size icon大小
+/// @param color icon形状颜色
+/// @param paddingPercent icon形状边距留白，值域：0 ～ 0.5
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color padding:(CGFloat)paddingPercent;
 
+/// 使用unicodeName创建icon
+/// @param unicodeName 支持3种格式，eg：1. @"e6e7"   2. @"&#xe6e7"   3. @"\U0000e6e7"
+/// @param size icon大小
+/// @param color icon形状颜色
+/// @param paddingPercent icon形状边距留白，值域：0 ～ 0.5
+/// @param backgroundColor 背景色
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color padding:(CGFloat)paddingPercent backgroundColor:(UIColor * _Nullable)backgroundColor;
 
+/// 使用unicodeName创建icon
+/// @param unicodeName 支持3种格式，eg：1. @"e6e7"   2. @"&#xe6e7"   3. @"\U0000e6e7"
+/// @param size icon大小
+/// @param color icon形状颜色
+/// @param inset icon形状边距
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset;
 
+/// 使用unicodeName创建icon
+/// @param unicodeName 支持3种格式，eg：1. @"e6e7"   2. @"&#xe6e7"   3. @"\U0000e6e7"
+/// @param size icon大小
+/// @param color icon形状颜色
+/// @param inset icon形状边距
+/// @param backgroundColor 背景色
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset backgroundColor:(UIColor * _Nullable)backgroundColor;
 
 #pragma mark - initWithFontClassName
