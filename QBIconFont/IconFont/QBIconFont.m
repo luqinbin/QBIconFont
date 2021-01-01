@@ -65,10 +65,15 @@ static Class<IconFontClassMapProtocol> iconFontMapClass;
 }
 
 + (UIImage *)iconWithFontName:(NSString *)fontName unicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset backgroundColor:(UIColor * _Nullable)backgroundColor {
-    if (![unicodeName hasPrefix:@"&#x"]) {
-        unicodeName = [NSString stringWithFormat:@"&#x%@", unicodeName];
+    NSString *unicode = unicodeName;
+    if (![unicodeName canBeConvertedToEncoding:NSASCIIStringEncoding]) {
+        unicode = unicodeName;
+    } else {
+        if (![unicodeName hasPrefix:@"&#x"]) {
+            unicodeName = [NSString stringWithFormat:@"&#x%@", unicodeName];
+        }
+        unicode = [QBIconFontUtils qbConvertHTMLToAttributedString:unicodeName].string;
     }
-    NSString *unicode = [QBIconFontUtils qbConvertHTMLToAttributedString:unicodeName].string;
     
     QBIconFontInfo *info = [[QBIconFontInfo alloc] initWithFontName:fontName text:unicode size:size color:color inset:inset];
     if (backgroundColor) {
