@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E47BC5E244D964400910F30 /* QBIconFont+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E47BC5D244D964400910F30 /* QBIconFont+Conveniences.m */; };
+		8E776D5C259ECF6200723B63 /* IconFontInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E776D5B259ECF6200723B63 /* IconFontInfo.m */; };
 		8E7EE1E924695407002ED420 /* QBIconFontUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EE1E824695407002ED420 /* QBIconFontUtils.m */; };
 		8EA37D1E2417E0F900EFAEC9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8EA37D192417E0F900EFAEC9 /* .gitkeep */; };
 		8EA37D1F2417E0F900EFAEC9 /* QBIconFontInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */; };
@@ -44,6 +45,9 @@
 /* Begin PBXFileReference section */
 		8E47BC5C244D964400910F30 /* QBIconFont+Conveniences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QBIconFont+Conveniences.h"; sourceTree = "<group>"; };
 		8E47BC5D244D964400910F30 /* QBIconFont+Conveniences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QBIconFont+Conveniences.m"; sourceTree = "<group>"; };
+		8E776D5A259ECF6200723B63 /* IconFontInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconFontInfo.h; sourceTree = "<group>"; };
+		8E776D5B259ECF6200723B63 /* IconFontInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconFontInfo.m; sourceTree = "<group>"; };
+		8E776D60259ED10900723B63 /* IconFontClassMapProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconFontClassMapProtocol.h; sourceTree = "<group>"; };
 		8E7EE1E724695407002ED420 /* QBIconFontUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QBIconFontUtils.h; sourceTree = "<group>"; };
 		8E7EE1E824695407002ED420 /* QBIconFontUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QBIconFontUtils.m; sourceTree = "<group>"; };
 		8EA37D172417E0F900EFAEC9 /* QBIconFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBIconFont.h; sourceTree = "<group>"; };
@@ -101,15 +105,16 @@
 		8EA37D162417E0F900EFAEC9 /* IconFont */ = {
 			isa = PBXGroup;
 			children = (
-				8EA37D172417E0F900EFAEC9 /* QBIconFont.h */,
 				8EA37D192417E0F900EFAEC9 /* .gitkeep */,
-				8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */,
+				8EA37D172417E0F900EFAEC9 /* QBIconFont.h */,
 				8EA37D1C2417E0F900EFAEC9 /* QBIconFont.m */,
 				8EA37D1D2417E0F900EFAEC9 /* QBIconFontInfo.h */,
+				8EA37D1A2417E0F900EFAEC9 /* QBIconFontInfo.m */,
 				8E47BC5C244D964400910F30 /* QBIconFont+Conveniences.h */,
 				8E47BC5D244D964400910F30 /* QBIconFont+Conveniences.m */,
 				8E7EE1E724695407002ED420 /* QBIconFontUtils.h */,
 				8E7EE1E824695407002ED420 /* QBIconFontUtils.m */,
+				8E776D60259ED10900723B63 /* IconFontClassMapProtocol.h */,
 			);
 			path = IconFont;
 			sourceTree = "<group>";
@@ -144,6 +149,8 @@
 				8EAB5DB92417DD7500EA88F0 /* SceneDelegate.m */,
 				8EAB5DBB2417DD7500EA88F0 /* ViewController.h */,
 				8EAB5DBC2417DD7500EA88F0 /* ViewController.m */,
+				8E776D5A259ECF6200723B63 /* IconFontInfo.h */,
+				8E776D5B259ECF6200723B63 /* IconFontInfo.m */,
 				8EAB5DBE2417DD7600EA88F0 /* Main.storyboard */,
 				8EAB5DC12417DD7700EA88F0 /* Assets.xcassets */,
 				8EAB5DC32417DD7700EA88F0 /* LaunchScreen.storyboard */,
@@ -308,6 +315,7 @@
 				8EAB5DBD2417DD7500EA88F0 /* ViewController.m in Sources */,
 				8E47BC5E244D964400910F30 /* QBIconFont+Conveniences.m in Sources */,
 				8EA37D1F2417E0F900EFAEC9 /* QBIconFontInfo.m in Sources */,
+				8E776D5C259ECF6200723B63 /* IconFontInfo.m in Sources */,
 				8EA37D212417E0F900EFAEC9 /* QBIconFont.m in Sources */,
 				8EAB5DB72417DD7500EA88F0 /* AppDelegate.m in Sources */,
 				8E7EE1E924695407002ED420 /* QBIconFontUtils.m in Sources */,

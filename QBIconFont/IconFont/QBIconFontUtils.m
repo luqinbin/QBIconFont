@@ -16,6 +16,15 @@
     return [string isEqual:[NSNull null]] || string == nil || string.length == 0;
 }
 
++ (NSMutableAttributedString *)qbConvertHTMLToAttributedString:(NSString *)htmlString {
+    NSString *content = @"";
+    if (![self isEmptyString:htmlString]) {
+        content = htmlString;
+    }
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithData:[content dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+    return attributedString;
+}
+
 #pragma mark - color
 
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex {

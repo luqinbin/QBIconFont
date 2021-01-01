@@ -9,11 +9,12 @@
 #import "QBIconFont+Conveniences.h"
 #import "QBIconFontUtils.h"
 
-static float QBIconFontDefautSize = 100;
-static float QBIconDefautPadding = 0.2;
+static float QBIconFontDefautSize = 100.0f;
+static float QBIconDefautPadding = 0.0f;
 
 @implementation QBIconFont (Conveniences)
 
+#pragma mark - DefautSize
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName color:(UIColor *)color {
     return [self iconWithUnicodeName:unicodeName fontSize:QBIconFontDefautSize color:color];
 }

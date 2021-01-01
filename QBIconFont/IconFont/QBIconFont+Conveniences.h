@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface QBIconFont (Conveniences)
 
+#pragma mark - DefautSize
 /// icon透明背景
 /// @param unicodeName unicode码
 /// @param color icon颜色
@@ -27,7 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param hexColor icon十六进制颜色
 /// @param backgroundHexColor icon背景十六进制颜色
 + (UIImage *)iconInRoundWithUnicodeName:(NSString *)unicodeName hexColor:(NSString *)hexColor backgroundHexColor:(NSString * _Nullable)backgroundHexColor;
-
 
 /// 圆形icon背景
 /// @param unicodeName unicode码

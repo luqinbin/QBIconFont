@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 是否是空string
 + (BOOL)isEmptyString:(NSString *)string;
 
+/// 将html格式的字符串转换为NSMutableAttributedString的富文本
+/// @param htmlString NSMutableAttributedString
++ (NSMutableAttributedString *)qbConvertHTMLToAttributedString:(NSString *)htmlString;
+
 #pragma mark - color
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex;
 + (UIColor *)qbColorWithHexValue:(NSUInteger)hex alpha:(CGFloat)alpha;

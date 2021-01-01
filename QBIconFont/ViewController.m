@@ -29,7 +29,8 @@
     }
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 200, 150, 150)];
-    imageView.image = [QBIconFont iconWithUnicodeName:@"\U0000e6eb" fontSize:50 color:UIColor.blueColor inset:UIEdgeInsetsMake(10, 10, 10, 10) backgroundColor:[UIColor grayColor]];
+    NSString *fontClassName = @"all";
+    imageView.image = [QBIconFont iconWithFontClassName:fontClassName fontSize:50 color:UIColor.blueColor inset:UIEdgeInsetsMake(0, 0, 0, 0) backgroundColor:[UIColor grayColor]];
     [self.view addSubview:imageView];
     imageView.contentMode = UIViewContentModeCenter;
     imageView.backgroundColor = UIColor.brownColor;

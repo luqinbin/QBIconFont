@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "IconFontInfo.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
     // Override point for customization after application launch.
     QBRegisterFontWithFontName(@"iconfont");
     QBSetIconFont(@"iconfont");
+    QBRegisterFontClassMap([IconFontInfo class]);
     
     return YES;
 }

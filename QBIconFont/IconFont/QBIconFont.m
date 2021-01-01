@@ -8,17 +8,13 @@
 
 #import "QBIconFont.h"
 #import "QBIconFontInfo.h"
+#import "QBIconFontUtils.h"
+#import "IconFontClassMapProtocol.h"
 #import <CoreText/CoreText.h>
 
 static QBCacheIconFonts *cacheIconFonts;
 static NSString *QBIconFontName;
-static const NSString *synKey = @"synKey";
-
-@interface QBIconFont ()
-
-@property (nonatomic, strong) NSString *fontName;
-
-@end
+static Class<IconFontClassMapProtocol> iconFontMapClass;
 
 @implementation QBIconFont
 
@@ -26,8 +22,7 @@ static const NSString *synKey = @"synKey";
     self = [super init];
     if (self) {
         NSAssert(!([fontName isEqual:[NSNull null]] || [fontName isEqualToString:@""]), @"Font name doesn't empty");
-        self.fontName = fontName;
-        NSURL *fontFileUrl = [[NSBundle mainBundle] URLForResource:self.fontName withExtension:@"ttf"];
+        NSURL *fontFileUrl = [[NSBundle mainBundle] URLForResource:fontName withExtension:@"ttf"];
         [self registerFontWithURL:fontFileUrl];
     }
     return self;
@@ -42,7 +37,7 @@ static const NSString *synKey = @"synKey";
     CGFontRelease(newFont);
 }
 
-#pragma mark - IconFont
+#pragma mark - initWithUnicodeName
 + (UIImage *)iconWithUnicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color {
     return [self iconWithUnicodeName:unicodeName fontSize:size color:color backgroundColor:nil];
 }
@@ -70,13 +65,51 @@ static const NSString *synKey = @"synKey";
 }
 
 + (UIImage *)iconWithFontName:(NSString *)fontName unicodeName:(NSString *)unicodeName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset backgroundColor:(UIColor * _Nullable)backgroundColor {
-    QBIconFontInfo *info = [[QBIconFontInfo alloc] initWithFontName:fontName text:unicodeName size:size color:color inset:inset];
+    if (![unicodeName hasPrefix:@"&#x"]) {
+        unicodeName = [NSString stringWithFormat:@"&#x%@", unicodeName];
+    }
+    NSString *unicode = [QBIconFontUtils qbConvertHTMLToAttributedString:unicodeName].string;
+    
+    QBIconFontInfo *info = [[QBIconFontInfo alloc] initWithFontName:fontName text:unicode size:size color:color inset:inset];
     if (backgroundColor) {
         info.backgroundColor = backgroundColor;
     }
     return [self iconWithInfo:info];
 }
 
+#pragma mark - initWithFontClassName
++ (UIImage *)iconWithFontClassName:(NSString *)fontClassName fontSize:(CGFloat)size color:(UIColor *)color {
+    NSString *unicodeName = [self iconfontUnicode:fontClassName];
+    return [self iconWithUnicodeName:unicodeName fontSize:size color:color];
+}
+
++ (UIImage *)iconWithFontClassName:(NSString *)fontClassName fontSize:(CGFloat)size color:(UIColor *)color backgroundColor:(UIColor * _Nullable)backgroundColor {
+    NSString *unicodeName = [self iconfontUnicode:fontClassName];
+    return [self iconWithUnicodeName:unicodeName fontSize:size color:color backgroundColor:backgroundColor];
+}
+
++ (UIImage *)iconWithFontClassName:(NSString *)fontClassName fontSize:(CGFloat)size color:(UIColor *)color padding:(CGFloat)paddingPercent {
+    NSString *unicodeName = [self iconfontUnicode:fontClassName];
+    return [self iconWithUnicodeName:unicodeName fontSize:size color:color padding:paddingPercent];
+}
+
++ (UIImage *)iconWithFontClassName:(NSString *)fontClassName fontSize:(CGFloat)size color:(UIColor *)color padding:(CGFloat)paddingPercent backgroundColor:(UIColor * _Nullable)backgroundColor {
+    NSString *unicodeName = [self iconfontUnicode:fontClassName];
+    return [self iconWithUnicodeName:unicodeName fontSize:size color:color padding:paddingPercent backgroundColor:backgroundColor];
+}
+
++ (UIImage *)iconWithFontClassName:(NSString *)fontClassName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset {
+    NSString *unicodeName = [self iconfontUnicode:fontClassName];
+    return [self iconWithUnicodeName:unicodeName fontSize:size color:color inset:inset];
+}
+
++ (UIImage *)iconWithFontClassName:(NSString *)fontClassName fontSize:(CGFloat)size color:(UIColor *)color inset:(UIEdgeInsets)inset backgroundColor:(UIColor * _Nullable)backgroundColor {
+    NSString *unicodeName = [self iconfontUnicode:fontClassName];
+    return [self iconWithUnicodeName:unicodeName fontSize:size color:color inset:inset backgroundColor:backgroundColor];
+}
+
+
+#pragma mark - Private
 + (UIImage *)iconWithInfo:(QBIconFontInfo *)fontInfo {
     CGFloat w1 = fontInfo.size - fontInfo.imageInsets.left - fontInfo.imageInsets.right;
     CGFloat w2 = fontInfo.size - fontInfo.imageInsets.top - fontInfo.imageInsets.bottom;
@@ -98,6 +131,15 @@ static const NSString *synKey = @"synKey";
     return image;
 }
 
++ (NSString *)iconfontUnicode:(NSString *)fontClass {
+    NSString *unicodeName = [[iconFontMapClass class] iconfontUnicode:fontClass];
+    return unicodeName;
+}
+
+@end
+
+
+#pragma mark - setup function
 void QBRegisterFontWithFontName(NSString *fontName) {
     if ([QBGetCacheIconFonts() objectForKey:fontName] != nil) {
         return;
@@ -105,14 +147,14 @@ void QBRegisterFontWithFontName(NSString *fontName) {
     
     QBIconFont *font = [[QBIconFont alloc] initWithFontName:fontName];
     if (font) {
-        @synchronized (synKey) {
+        @synchronized ([QBIconFont class]) {
             [QBGetCacheIconFonts() setObject:font forKey:fontName];
         }
     }
 }
 
 QBCacheIconFonts *QBGetCacheIconFonts(void) {
-    @synchronized (synKey) {
+    @synchronized ([QBIconFont class]) {
         if (cacheIconFonts) {
             return cacheIconFonts;
         }
@@ -126,4 +168,6 @@ void QBSetIconFont(NSString *iconFontName) {
     QBIconFontName = iconFontName;
 }
 
-@end
+void QBRegisterFontClassMap(Class<IconFontClassMapProtocol> mapClass) {
+    iconFontMapClass = mapClass;
+}
